@@ -1,0 +1,26 @@
+.read ../src/scripts/cleanup.sql
+.read ../src/scripts/create_tables_sqlite_required_ansi.sql
+.read ../src/scripts/address_view.sql
+.read ../src/scripts/address_combined_view.sql
+.separator "|"
+.import ../data/woh/ACT_ADDRESS_DEFAULT_GEOCODE_psv.psv ADDRESS_DEFAULT_GEOCODE
+.import ../data/woh/NSW_ADDRESS_DEFAULT_GEOCODE_psv.psv ADDRESS_DEFAULT_GEOCODE
+.import ../data/woh/VIC_ADDRESS_DEFAULT_GEOCODE_psv.psv ADDRESS_DEFAULT_GEOCODE
+.import ../data/woh/ACT_ADDRESS_DETAIL_psv.psv ADDRESS_DETAIL
+.import ../data/woh/NSW_ADDRESS_DETAIL_psv.psv ADDRESS_DETAIL
+.import ../data/woh/VIC_ADDRESS_DETAIL_psv.psv ADDRESS_DETAIL
+.import ../data/woh/ACT_LOCALITY_psv.psv LOCALITY
+.import ../data/woh/NSW_LOCALITY_psv.psv LOCALITY
+.import ../data/woh/VIC_LOCALITY_psv.psv LOCALITY
+.import ../data/woh/ACT_STATE_psv.psv STATE
+.import ../data/woh/NSW_STATE_psv.psv STATE
+.import ../data/woh/VIC_STATE_psv.psv STATE
+.import ../data/woh/ACT_STREET_LOCALITY_psv.psv STREET_LOCALITY
+.import ../data/woh/Authority_Code_FLAT_TYPE_AUT_psv.psv FLAT_TYPE_AUT
+.import ../data/woh/Authority_Code_GEOCODE_TYPE_AUT_psv.psv GEOCODE_TYPE_AUT
+.import ../data/woh/Authority_Code_GEOCODED_LEVEL_TYPE_AUT_psv.psv GEOCODED_LEVEL_TYPE_AUT
+.import ../data/woh/Authority_Code_LEVEL_TYPE_AUT_psv.psv LEVEL_TYPE_AUT
+.import ../data/woh/Authority_Code_STREET_CLASS_AUT_psv.psv STREET_CLASS_AUT
+.import ../data/woh/Authority_Code_STREET_SUFFIX_AUT_psv.psv STREET_SUFFIX_AUT
+.import ../data/woh/Authority_Code_STREET_TYPE_AUT_psv.psv STREET_TYPE_AUT
+VACUUM;
